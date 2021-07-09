@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".HomeActivity">
+
+    <Button
+        android:onClick="openGeneralNews"
+        android:background="@drawable/button_shape"
+        android:id="@+id/general"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="general"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:onClick="openHealthNews"
+        android:background="@drawable/button_shape"
+        android:id="@+id/health"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="health"
+        app:layout_constraintEnd_toStartOf="@id/science"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/general" />
+
+    <Button
+        android:onClick="openScienceNews"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/button_shape"
+        android:id="@+id/science"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="science"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/health"
+        app:layout_constraintTop_toTopOf="@id/health" />
+
+    <Button
+        android:onClick="openSportsNews"
+        android:background="@drawable/button_shape"
+        android:id="@+id/sports"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="sports"
+        app:layout_constraintEnd_toStartOf="@id/technology"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/health" />
+    <Button
+        android:onClick="openTechnologyNews"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/button_shape"
+        android:id="@+id/technology"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="technology"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sports"
+        app:layout_constraintTop_toTopOf="@id/sports" />
+    <Button
+        android:onClick="openEntertainmentNews"
+        android:background="@drawable/button_shape"
+        android:id="@+id/entertainment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="entertainment"
+        app:layout_constraintEnd_toStartOf="@id/business"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sports" />
+    <Button
+         android:onClick="openBusinessNews"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/button_shape"
+        android:id="@+id/business"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="business"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/entertainment"
+        app:layout_constraintTop_toTopOf="@id/entertainment" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv"
+        android:text="Choose Country:"
+        android:textSize="24sp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@+id/entertainment"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio"
+        app:layout_constraintTop_toBottomOf="@+id/tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Rb1"
+            android:text="Egypt"
+            android:textSize="24dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Rb2"
+            android:text="U.S.A"
+            android:textSize="24dp"/>
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
